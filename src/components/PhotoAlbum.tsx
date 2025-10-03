@@ -10,7 +10,20 @@ const albumImages = [
 
 export default function PhotoAlbum() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const imagesPerSlide = 3;
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Check if mobile on mount and resize
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const imagesPerSlide = isMobile ? 1 : 3;
   const totalSlides = Math.ceil(albumImages.length / imagesPerSlide);
 
   // Auto-slide functionality
@@ -49,19 +62,21 @@ export default function PhotoAlbum() {
           >
             {Array.from({ length: totalSlides }).map((_, slideIndex) => (
               <div key={slideIndex} className="w-full flex-shrink-0">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+                <div className={`grid gap-0 ${isMobile ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-3'}`}>
                   {albumImages
                     .slice(slideIndex * imagesPerSlide, (slideIndex + 1) * imagesPerSlide)
                     .map((image, imageIndex) => (
                       <div 
                         key={`${slideIndex}-${imageIndex}`} 
-                        className="relative h-64 md:h-180 rounded-lg overflow-hidden shadow-lg group"
+                        className={`relative rounded-lg overflow-hidden shadow-lg group ${
+                          isMobile ? 'h-160' : 'h-64 md:h-80'
+                        }`}
                       >
                         <Image
                           src={`/images/album-slide/${image}`}
                           alt={`Desert Safari Experience ${slideIndex * imagesPerSlide + imageIndex + 1}`}
                           fill
-                          sizes="(max-width: 768px) 100vw, 33vw"
+                          sizes={isMobile ? "100vw" : "(max-width: 768px) 100vw, 33vw"}
                           className="object-cover transition-transform duration-300 group-hover:scale-105"
                           quality={75}
                         />
@@ -95,7 +110,7 @@ export default function PhotoAlbum() {
           <h3 className="text-3xl font-bold text-gray-800 mb-6">
             Dubai&apos;s Best Safari Experiences Curated Just for You
           </h3>
-          <p className="text-gray-700 text-lg leading-relaxed max-w-4xl mx-auto mb-8">
+          <p className="text-gray-700 text-sm leading-relaxed max-w-4xl mx-auto mb-8">
             If you are looking for more than desert adventures in Dubai, Take My Trip is the best choice. As the premier Desert Safari Dubai experience provider, we offer a wide range of fun activities with an amazing desert safari adventure. Take My Trip offers various activity packages that also include pickup from your location. With cultural heritage, beautiful sceneries, fun thrills, and wildlife safari, Take My Trip provides a range of unforgettable tours.
           </p>
           
