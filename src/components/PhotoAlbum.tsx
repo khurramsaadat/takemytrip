@@ -5,8 +5,7 @@ import { useState, useEffect } from "react";
 
 const albumImages = [
   "a1.jpg", "a2.jpg", "a3.jpg", "a4.jpg", "a5.jpg", "a6.jpg", "a7.jpg", "a8.jpg", "a9.jpg",
-  "b1.jpg", "b2.jpg", "b3.jpg", "b4.jpg", "b5.jpg", "b6.jpg", "b7.jpg", "b8.jpg", "b9.jpg",
-  "c1.jpg"
+  "b1.jpg", "b2.jpg", "b3.jpg", "b4.jpg", "b5.jpg", "b6.jpg", "b7.jpg", "b8.jpg", "b9.jpg"
 ];
 
 export default function PhotoAlbum() {
@@ -30,7 +29,7 @@ export default function PhotoAlbum() {
 
   return (
     <section className="py-16 bg-gray-50">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-12">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-800 mb-4">
@@ -50,13 +49,13 @@ export default function PhotoAlbum() {
           >
             {Array.from({ length: totalSlides }).map((_, slideIndex) => (
               <div key={slideIndex} className="w-full flex-shrink-0">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
                   {albumImages
                     .slice(slideIndex * imagesPerSlide, (slideIndex + 1) * imagesPerSlide)
                     .map((image, imageIndex) => (
                       <div 
                         key={`${slideIndex}-${imageIndex}`} 
-                        className="relative h-64 md:h-80 rounded-lg overflow-hidden shadow-lg group"
+                        className="relative h-64 md:h-180 rounded-lg overflow-hidden shadow-lg group"
                       >
                         <Image
                           src={`/images/album-slide/${image}`}
