@@ -38,7 +38,7 @@ export default function Testimonials() {
                 height={80}
                 className="rounded-full mb-4 object-cover"
               />
-              <p className="text-gray-700 italic mb-4">"{testimonial.quote}"</p>
+              <p className="text-gray-700 italic mb-4">&ldquo;{testimonial.quote}&rdquo;</p>
               <h4 className="text-lg font-semibold text-gray-800">{testimonial.name}</h4>
               <p className="text-gray-500 text-sm">{testimonial.location}</p>
             </div>

@@ -12,7 +12,7 @@ export default function AboutUsPage() {
             At Take My Trip, we specialize in curating unforgettable journeys through the heart of the Emirates. With deep local knowledge, handpicked tour experiences, and a passion for excellence, we are more than a travel company—we are your companions in discovery.
           </p>
           <p className="text-gray-700 text-lg leading-relaxed">
-            Whether you're visiting for the first time or exploring deeper, our promise is simple: authentic, seamless, and exciting adventures from start to finish.
+            Whether you&apos;re visiting for the first time or exploring deeper, our promise is simple: authentic, seamless, and exciting adventures from start to finish.
           </p>
         </div>
         <div className="lg:w-1/2 relative h-96 w-full rounded-lg overflow-hidden shadow-lg">

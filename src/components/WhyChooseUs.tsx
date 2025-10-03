@@ -8,7 +8,7 @@ export default function WhyChooseUs() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Expert Guided Tours</h3>
-            <p className="text-gray-600">Explore the desert's wonders with expert guidance and fascinating narratives.</p>
+            <p className="text-gray-600">Explore the desert&apos;s wonders with expert guidance and fascinating narratives.</p>
           </div>
           <div className="bg-white p-8 rounded-lg shadow-lg">
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">Family-Friendly Activities</h3>

@@ -1,8 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
 
+// Tour detail type definition
+interface TourDetail {
+  name: string;
+  category: string;
+  price: string;
+  duration: string;
+  image: string;
+  description: string;
+  highlights: string[];
+  inclusions: string[];
+  exclusions: string[];
+  gallery?: string[];
+}
+
 // Placeholder data for a single tour detail
-const tourDetails: { [key: string]: any } = {
+const tourDetails: { [key: string]: TourDetail } = {
   "premium-evening-desert-safari": {
     name: "Premium Evening Desert Safari & BBQ Dinner",
     category: "Desert Safari",
