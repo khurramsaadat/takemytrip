@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-[60vh] flex items-center justify-center text-center text-white">
+    <section className="relative h-[80vh] flex items-center justify-center text-center text-black">
       <Image
         src="/images/hero.jpg"
         alt="Desert Safari"
@@ -13,7 +13,7 @@ export default function HeroSection() {
         quality={100}
         className="absolute inset-0 z-0 object-cover"
       />
-      <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+      <div className="absolute inset-0 bg-black opacity-0 z-10"></div>
       <div className="relative z-20 p-4">
         <h1 className="text-5xl font-bold mb-4">Discover Dubai Like Never Before</h1>
         <p className="text-xl mb-8">From thrilling desert safaris to luxurious dhow cruises</p>
