@@ -79,4 +79,138 @@
 All pages now have consistent mobile-first responsive typography matching the main page design system. Memory created for future reference.
 
 ---
-*Log entry created: 2025-10-03*
+
+## 2025-10-03 - Smooth Scrolling Implementation
+
+### User Request:
+**Time:** 2025-10-03  
+**Request:** "scroll on all pages should be smooth - when using mouse scroll on all pages it should be smooth, not like a usual scroll which is not nice"
+
+### Actions Taken:
+
+1. **CSS-Based Smooth Scrolling** ✅
+   - Added `scroll-behavior: smooth;` to html element
+   - Applied smooth scrolling to all elements with `* { scroll-behavior: smooth; }`
+   - Ensures smooth scrolling for all anchor links and programmatic scrolling
+
+2. **Enhanced Mouse Wheel Scrolling** ✅
+   - Created `SmoothScroll.tsx` component with JavaScript-based smooth scrolling
+   - Implemented custom wheel event handler for enhanced mouse wheel experience
+   - Added throttling to prevent scroll conflicts and ensure smooth performance
+   - Integrated component into root layout for global application
+
+3. **Custom Scrollbar Styling** ✅
+   - Added webkit scrollbar styling for better visual experience
+   - Implemented thin, rounded scrollbars with hover effects
+   - Added Firefox scrollbar support with `scrollbar-width` and `scrollbar-color`
+   - Smooth transitions on scrollbar hover states
+
+4. **Global Implementation** ✅
+   - Applied smooth scrolling across all pages through root layout
+   - No page-specific changes needed - works universally
+   - Build tested successfully with no errors
+
+### Technical Implementation:
+- **CSS:** `scroll-behavior: smooth` for native smooth scrolling
+- **JavaScript:** Custom wheel event handler with `scrollBy({ behavior: 'smooth' })`
+- **Throttling:** 50ms delay to prevent scroll conflicts
+- **Scrollbar:** Custom webkit styling with hover effects
+
+### Files Modified:
+- `src/app/globals.css` - Added smooth scrolling CSS and scrollbar styling
+- `src/components/SmoothScroll.tsx` - Created smooth scroll component
+- `src/app/layout.tsx` - Integrated SmoothScroll component
+- `PROGRESS.md` - Updated with smooth scrolling implementation
+- `LOG.md` - Added this log entry
+
+### Status: COMPLETED ✅
+All pages now have elegant smooth scrolling behavior for both mouse wheel and programmatic scrolling. Enhanced user experience with custom scrollbar styling.
+
+---
+
+## 2025-10-03 - Scroll Speed Optimization
+
+### User Request:
+**Time:** 2025-10-03  
+**Request:** "desktop mouse scroll seams a bit slow"
+
+### Actions Taken:
+
+1. **Increased Scroll Distance** ✅
+   - Changed base scroll amount from 100px to 150px for normal scrolling
+   - Added dynamic scaling: 200px for larger wheel movements (delta > 100)
+   - More responsive feel while maintaining smoothness
+
+2. **Reduced Throttling Delay** ✅
+   - Decreased timeout from 50ms to 30ms for faster response
+   - Allows for quicker consecutive scroll actions
+   - Better desktop mouse wheel responsiveness
+
+3. **Dynamic Scroll Scaling** ✅
+   - Implemented delta-based scaling for more natural feel
+   - Larger wheel movements = larger scroll distances
+   - Maintains smooth behavior while improving speed
+
+### Technical Changes:
+- **Scroll Amount:** 150px base, 200px for large movements (was 100px)
+- **Throttling:** 30ms delay (was 50ms)
+- **Scaling:** Dynamic based on `Math.abs(delta) > 100`
+
+### Files Modified:
+- `src/components/SmoothScroll.tsx` - Optimized scroll speed and responsiveness
+- `LOG.md` - Added this optimization log
+
+### Status: COMPLETED ✅
+Desktop mouse scrolling is now faster and more responsive while maintaining the smooth scrolling experience.
+
+---
+
+## 2025-10-03 - Continuous Scroll Optimization
+
+### User Request:
+**Time:** 2025-10-03  
+**Request:** "smallest wheel movement of mouse scroll looks ok but long turing mouse well seems laggy"
+
+### Problem Identified:
+- Small/single wheel movements worked well
+- Continuous/long wheel turning felt laggy due to throttling blocking subsequent movements
+- Need to handle continuous scrolling differently from single movements
+
+### Actions Taken:
+
+1. **Accumulated Delta System** ✅
+   - Implemented delta accumulation for continuous scrolling
+   - Collects wheel movements during continuous scrolling
+   - Calculates appropriate scroll distance based on accumulated movement
+
+2. **Dynamic Scroll Multipliers** ✅
+   - **Light scrolling:** 1.5x multiplier for small movements
+   - **Medium scrolling:** 2x multiplier for moderate continuous scrolling (>150 delta)
+   - **Heavy scrolling:** 2.5x multiplier for fast continuous scrolling (>300 delta)
+   - **Max cap:** 400px to prevent excessive jumping
+
+3. **Improved Timeout Management** ✅
+   - Reduced timeout to 20ms for more responsive continuous scrolling
+   - Clear and reset timeouts for smooth continuous movement
+   - Proper cleanup to prevent memory leaks
+
+4. **Smart Blocking Logic** ✅
+   - Only blocks during actual scroll execution, not during accumulation
+   - Allows continuous wheel events to accumulate while scrolling
+   - Better handling of rapid wheel movements
+
+### Technical Implementation:
+- **Accumulation:** Collects `deltaY` values during continuous scrolling
+- **Multipliers:** 1.5x, 2x, 2.5x based on accumulated delta magnitude
+- **Timeout:** 20ms for responsive continuous scrolling
+- **Max scroll:** 400px cap to prevent excessive movement
+
+### Files Modified:
+- `src/components/SmoothScroll.tsx` - Implemented continuous scroll optimization
+- `LOG.md` - Added this optimization log
+
+### Status: COMPLETED ✅
+Both small wheel movements and continuous long wheel turning now work smoothly without lag. The system adapts to different scrolling patterns for optimal user experience.
+
+---
+*Log entry updated: 2025-10-03*
