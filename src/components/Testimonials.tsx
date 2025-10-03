@@ -5,19 +5,19 @@ const testimonials = [
     name: "Ahmed S",
     location: "UAE",
     quote: "The Hatta mountain tour was spectacular. Our guide showed us hidden wadis, traditional ruins, and even helped us try local sweets. A must-do with Take My Trip!",
-    avatar: "/images/WhatsApp Image 2025-10-01 at 7.33.32 PM.jpeg", // Placeholder image
+    avatar: "/images/14.jpg", // Placeholder image
   },
   {
     name: "Maria G",
     location: "USA",
     quote: "Booked quad bikes for my son’s birthday—he still talks about it! The bikes were new, the guides prioritized safety, and we got amazing desert photos.",
-    avatar: "/images/WhatsApp Image 2025-10-01 at 7.33.32 PM (1).jpeg", // Placeholder image
+    avatar: "/images/13.jpg", // Placeholder image
   },
   {
     name: "Lisa M",
     location: "UK",
     quote: "Take My Trip took our family on the most magical overnight desert safari—roasting marshmallows by campfire under a million stars. Unforgettable!",
-    avatar: "/images/WhatsApp Image 2025-10-01 at 7.33.33 PM.jpeg", // Placeholder image
+    avatar: "/images/17.jpg", // Placeholder image
   },
 ];
 

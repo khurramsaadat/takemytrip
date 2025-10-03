@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <section className="relative h-[60vh] flex items-center justify-center text-center text-white">
       <Image
-        src="/images/WhatsApp Image 2025-10-01 at 7.33.35 PM.jpeg"
+        src="/images/hero.jpg"
         alt="Desert Safari"
         fill
         sizes="100vw"

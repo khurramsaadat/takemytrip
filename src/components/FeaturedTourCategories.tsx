@@ -5,25 +5,25 @@ const categories = [
   {
     name: "Desert Safari",
     description: "This is the most popular tour/activity to do in UAE",
-    image: "/images/WhatsApp Image 2025-10-01 at 7.33.27 PM.jpeg",
+    image: "/images/01.jpg",
     link: "/tours/desert-safari",
   },
   {
     name: "City Tours",
     description: "Explore Dubai, Abu Dhabi, Sharjah and Al Ain with expert-guided city sightseeing tours",
-    image: "/images/WhatsApp Image 2025-10-01 at 7.33.27 PM1.jpeg",
+    image: "/images/02.jpg",
     link: "/tours/city-tours",
   },
   {
     name: "Tickets to Top Attractions",
     description: "Burj Khalifa, Ferrari World, Theme Parks & More",
-    image: "/images/WhatsApp Image 2025-10-01 at 7.33.28 PM.jpeg",
+    image: "/images/04.jpg",
     link: "/tours/attractions",
   },
   {
     name: "Dhow Cruises",
     description: "Dubai dhow cruise with sunset views, live entertainment & onboard dining",
-    image: "/images/WhatsApp Image 2025-10-01 at 7.33.29 PM.jpeg",
+    image: "/images/07.jpg",
     link: "/tours/dhow-cruises",
   },
 ];

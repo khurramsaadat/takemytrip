@@ -22,7 +22,7 @@ const tourDetails: { [key: string]: TourDetail } = {
     category: "Desert Safari",
     price: "AED 150.00",
     duration: "6-7 hours",
-    image: "/images/WhatsApp Image 2025-10-01 at 7.33.30 PM.jpeg",
+    image: "/images/09.jpg",
     description: "Experience an unforgettable evening in the Dubai desert with thrilling dune bashing, a camel ride, sandboarding, and a delicious BBQ dinner under the stars. Enjoy traditional entertainment like belly dancing and fire shows at a Bedouin-style camp.",
     highlights: [
       "Dune bashing in a 4x4 vehicle",
@@ -47,10 +47,10 @@ const tourDetails: { [key: string]: TourDetail } = {
       "Souvenirs",
     ],
     gallery: [
-      "/images/WhatsApp Image 2025-10-01 at 7.38.59 PM (2).jpeg",
-      "/images/WhatsApp Image 2025-10-01 at 7.38.59 PM (3).jpeg",
-      "/images/WhatsApp Image 2025-10-01 at 7.38.59 PM (4).jpeg",
-      "/images/WhatsApp Image 2025-10-01 at 7.38.59 PM (5).jpeg",
+      "/images/22.jpg",
+      "/images/23.jpg",
+      "/images/24.jpg",
+      "/images/25.jpg",
     ],
   },
   "abu-dhabi-grand-mosque-tour": {
@@ -58,7 +58,7 @@ const tourDetails: { [key: string]: TourDetail } = {
     category: "City Tours",
     price: "AED 150.00",
     duration: "9 hours",
-    image: "/images/WhatsApp Image 2025-10-01 at 7.33.30 PM (1).jpeg",
+    image: "/images/08.jpg",
     description: "Embark on a full-day tour to Abu Dhabi from Dubai and explore the magnificent Sheikh Zayed Grand Mosque, one of the world's largest mosques. Visit other key attractions like the Emirates Palace and Heritage Village.",
     highlights: [
       "Visit Sheikh Zayed Grand Mosque",
@@ -78,9 +78,9 @@ const tourDetails: { [key: string]: TourDetail } = {
       "Souvenirs",
     ],
     gallery: [
-      "/images/WhatsApp Image 2025-10-01 at 7.41.13 PM.jpeg",
-      "/images/WhatsApp Image 2025-10-01 at 7.41.13 PM (1).jpeg",
-      "/images/WhatsApp Image 2025-10-01 at 7.41.13 PM (2).jpeg",
+      "/images/29.jpg",
+      "/images/27.jpg",
+      "/images/28.jpg",
     ],
   },
   // Add more tour details as needed

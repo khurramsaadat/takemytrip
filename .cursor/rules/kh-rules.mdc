@@ -44,10 +44,10 @@ alwaysApply: true
 - When adding new code, ensure it doesn't introduce new problems.
 - After fixing errors, verify the fix by checking the Problems tab again.
 - For configuration errors (like next.config.ts), address them before proceeding with feature work.
-- Git is main not master.
 - Always follow PRD.md and Plan.md files.
 - Make PROGRESS.md file.
 - When user mention save, please update all md files and report each progress in PROGRESS.md file.
 - Always remember my inputs and remind me if i make a mistake.
 - Always ask questions before you generate code. I am on windows.
-- Make a LOG.md of all of my inputs with time and date stamp for my records and update it when user mention save.
+- Make a LOG.md of all of my inputs with time and date stamp for my records and keep it updated
+- Git is main not master.

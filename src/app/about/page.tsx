@@ -17,7 +17,7 @@ export default function AboutUsPage() {
         </div>
         <div className="lg:w-1/2 relative h-96 w-full rounded-lg overflow-hidden shadow-lg">
           <Image
-            src="/images/WhatsApp Image 2025-10-01 at 7.41.14 PM.jpeg" // Placeholder image
+            src="/images/33.jpg" // Placeholder image
             alt="About Us"
             layout="fill"
             objectFit="cover"
