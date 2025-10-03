@@ -2,9 +2,35 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #2579ff;
 }
 
+.client-logos-container {
+  width: 100%;
+  overflow: hidden;
+  margin: 100px 0;
+}
+
+.client-logos-scroll {
+  display: flex;
+  animation: scroll 40s linear infinite;
+  white-space: nowrap;
+  min-width: max-content;
+}
+
+.client-logo {
+  margin: 0 60px;
+  display: inline-block;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -22,5 +48,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-poppins);
 }
