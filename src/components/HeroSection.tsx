@@ -14,10 +14,37 @@ const heroImages = [
 
 export default function HeroSection() {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
   // Get current image data
   const currentImage = heroImages[currentImageIndex];
   const textColorClass = currentImage.isDark ? 'text-white' : 'text-black';
+
+  // Swipe functionality
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(0);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % heroImages.length);
+    }
+    if (isRightSwipe) {
+      setCurrentImageIndex((prevIndex) => (prevIndex - 1 + heroImages.length) % heroImages.length);
+    }
+  };
 
   // Auto-slide functionality
   useEffect(() => {
@@ -29,7 +56,12 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className={`relative h-[80vh] flex items-center justify-center text-center overflow-hidden ${textColorClass}`}>
+    <section 
+      className={`relative h-[80vh] flex items-center justify-center text-center overflow-hidden ${textColorClass}`}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       {/* Image Slider */}
       <div className="absolute inset-0">
         {heroImages.map((imageData, index) => (
@@ -62,21 +94,21 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-20 p-4 transition-colors duration-1000">
-        <h1 className={`text-5xl font-bold mb-4 transition-colors duration-1000 ${
+        <h1 className={`text-2xl md:text-5xl font-bold mb-4 transition-colors duration-1000 ${
           currentImage.isDark 
             ? 'drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] text-shadow-lg' 
             : 'drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]'
         }`}>
           Discover Dubai Like Never Before
         </h1>
-        <p className={`text-xl mb-8 transition-colors duration-1000 ${
+        <p className={`text-sm md:text-xl mb-8 transition-colors duration-1000 ${
           currentImage.isDark 
             ? 'drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]' 
             : 'drop-shadow-[0_1px_3px_rgba(255,255,255,0.8)]'
         }`}>
           From thrilling desert safaris to luxurious dhow cruises
         </p>
-        <Link href="/tours" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 shadow-lg">
+        <Link href="/tours" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 md:py-3 md:px-8 rounded-full text-sm md:text-lg transition duration-300 shadow-lg">
           Explore Our Tours
         </Link>
       </div>

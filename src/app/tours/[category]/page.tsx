@@ -104,7 +104,7 @@ export default function TourCategoryDetailPage({ params }: { params: { category:
 
   return (
     <div className="container mx-auto px-6 py-16">
-      <h1 className="text-5xl font-bold text-center text-gray-800 mb-12">{categoryName} Tours</h1>
+      <h1 className="text-2xl md:text-5xl font-bold text-center text-gray-800 mb-12">{categoryName} Tours</h1>
       {tours.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {tours.map((tour, index) => (
@@ -118,11 +118,11 @@ export default function TourCategoryDetailPage({ params }: { params: { category:
                   className="transition-transform duration-300 hover:scale-105"
                 />
               </div>
-              <div className="p-6 text-left">
-                <h2 className="text-xl font-semibold text-gray-800 mb-2">{tour.name}</h2>
-                <p className="text-gray-600 text-sm mb-2">Duration: {tour.duration}</p>
-                <p className="text-blue-600 font-bold text-lg">{tour.price} /person</p>
-                <button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full text-sm transition duration-300">
+              <div className="p-4 md:p-6 text-left">
+                <h2 className="text-base md:text-xl font-semibold text-gray-800 mb-2">{tour.name}</h2>
+                <p className="text-gray-600 text-xs md:text-sm mb-2">Duration: {tour.duration}</p>
+                <p className="text-blue-600 font-bold text-sm md:text-lg">{tour.price} /person</p>
+                <button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-3 md:py-2 md:px-4 rounded-full text-xs md:text-sm transition duration-300">
                   View Details
                 </button>
               </div>
@@ -130,7 +130,7 @@ export default function TourCategoryDetailPage({ params }: { params: { category:
           ))}
         </div>
       ) : (
-        <p className="text-center text-gray-600 text-lg">No tours found for this category.</p>
+        <p className="text-center text-gray-600 text-sm md:text-lg">No tours found for this category.</p>
       )}
     </div>
   );

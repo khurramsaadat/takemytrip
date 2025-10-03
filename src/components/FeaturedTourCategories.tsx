@@ -32,8 +32,8 @@ export default function FeaturedTourCategories() {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold text-gray-800 mb-4">Handpicked Adventures by Take My Trip</h2>
-        <p className="text-xl text-gray-600 mb-12">Your Next Arabian Adventure Awaits</p>
+        <h2 className="text-xl md:text-4xl font-bold text-gray-800 mb-4">Handpicked Adventures by Take My Trip</h2>
+        <p className="text-sm md:text-xl text-gray-600 mb-12">Your Next Arabian Adventure Awaits</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {categories.map((category, index) => (
@@ -48,8 +48,8 @@ export default function FeaturedTourCategories() {
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">{category.name}</h3>
-                <p className="text-gray-600 text-sm">{category.description}</p>
+                <h3 className="text-base md:text-xl font-semibold text-gray-800 mb-2">{category.name}</h3>
+                <p className="text-gray-600 text-xs md:text-sm">{category.description}</p>
               </div>
             </Link>
           ))}

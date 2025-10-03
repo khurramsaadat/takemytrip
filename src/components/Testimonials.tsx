@@ -25,12 +25,12 @@ export default function Testimonials() {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold text-gray-800 mb-4">Hear From Our Happy Explorers</h2>
-        <p className="text-xl text-gray-600 mb-12">Every tour we offer is a chapter in your travel story. Make it unforgettable.</p>
+        <h2 className="text-xl md:text-4xl font-bold text-gray-800 mb-4">Hear From Our Happy Explorers</h2>
+        <p className="text-sm md:text-xl text-gray-600 mb-12">Every tour we offer is a chapter in your travel story. Make it unforgettable.</p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-gray-50 p-8 rounded-lg shadow-lg flex flex-col items-center">
+            <div key={index} className="bg-gray-50 p-4 md:p-8 rounded-lg shadow-lg flex flex-col items-center">
               <Image
                 src={testimonial.avatar}
                 alt={testimonial.name}
@@ -38,9 +38,9 @@ export default function Testimonials() {
                 height={80}
                 className="rounded-full mb-4 object-cover"
               />
-              <p className="text-gray-700 italic mb-4">&ldquo;{testimonial.quote}&rdquo;</p>
-              <h4 className="text-lg font-semibold text-gray-800">{testimonial.name}</h4>
-              <p className="text-gray-500 text-sm">{testimonial.location}</p>
+              <p className="text-gray-700 italic mb-4 text-xs md:text-base">&ldquo;{testimonial.quote}&rdquo;</p>
+              <h4 className="text-sm md:text-lg font-semibold text-gray-800">{testimonial.name}</h4>
+              <p className="text-gray-500 text-xs md:text-sm">{testimonial.location}</p>
             </div>
           ))}
         </div>

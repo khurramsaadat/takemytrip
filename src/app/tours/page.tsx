@@ -49,7 +49,7 @@ const categories = [
 export default function TourCategoriesPage() {
   return (
     <div className="container mx-auto px-6 py-16">
-      <h1 className="text-5xl font-bold text-center text-gray-800 mb-12">Our Tour Categories</h1>
+      <h1 className="text-2xl md:text-5xl font-bold text-center text-gray-800 mb-12">Our Tour Categories</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {categories.map((category, index) => (
           <Link href={category.link} key={index} className="block bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
@@ -62,9 +62,9 @@ export default function TourCategoriesPage() {
                 className="transition-transform duration-300 hover:scale-105"
               />
             </div>
-            <div className="p-6">
-              <h2 className="text-2xl font-semibold text-gray-800 mb-2">{category.name}</h2>
-              <p className="text-gray-600">{category.description}</p>
+            <div className="p-4 md:p-6">
+              <h2 className="text-base md:text-2xl font-semibold text-gray-800 mb-2">{category.name}</h2>
+              <p className="text-xs md:text-base text-gray-600">{category.description}</p>
             </div>
           </Link>
         ))}

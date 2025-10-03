@@ -93,9 +93,9 @@ export default function TourDetailPage({ params }: { params: { category: string;
   if (!tour) {
     return (
       <div className="container mx-auto px-6 py-16 text-center">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">Tour Not Found</h1>
-        <p className="text-lg text-gray-600">The tour you are looking for does not exist.</p>
-        <Link href="/tours" className="mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
+        <h1 className="text-xl md:text-4xl font-bold text-gray-800 mb-4">Tour Not Found</h1>
+        <p className="text-sm md:text-lg text-gray-600">The tour you are looking for does not exist.</p>
+        <Link href="/tours" className="mt-8 inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 md:py-3 md:px-8 rounded-full text-sm md:text-lg transition duration-300">
           Back to Tours
         </Link>
       </div>
@@ -104,7 +104,7 @@ export default function TourDetailPage({ params }: { params: { category: string;
 
   return (
     <div className="container mx-auto px-6 py-16">
-      <h1 className="text-5xl font-bold text-center text-gray-800 mb-12">{tour.name}</h1>
+      <h1 className="text-xl md:text-5xl font-bold text-center text-gray-800 mb-12">{tour.name}</h1>
 
       <div className="relative h-[70vh] w-full mb-12 rounded-lg overflow-hidden shadow-lg">
         <Image
@@ -118,25 +118,25 @@ export default function TourDetailPage({ params }: { params: { category: string;
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
         <div className="lg:col-span-2">
-          <h2 className="text-3xl font-bold text-gray-800 mb-6">Overview</h2>
-          <p className="text-gray-700 text-lg leading-relaxed mb-8">{tour.description}</p>
+          <h2 className="text-xl md:text-3xl font-bold text-gray-800 mb-6">Overview</h2>
+          <p className="text-gray-700 text-sm md:text-lg leading-relaxed mb-8">{tour.description}</p>
 
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">Highlights</h3>
-          <ul className="list-disc list-inside text-gray-700 text-lg mb-8 space-y-2">
+          <h3 className="text-lg md:text-2xl font-bold text-gray-800 mb-4">Highlights</h3>
+          <ul className="list-disc list-inside text-gray-700 text-sm md:text-lg mb-8 space-y-2">
             {tour.highlights.map((highlight: string, index: number) => (
               <li key={index}>{highlight}</li>
             ))}
           </ul>
 
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">Inclusions</h3>
-          <ul className="list-disc list-inside text-gray-700 text-lg mb-8 space-y-2">
+          <h3 className="text-lg md:text-2xl font-bold text-gray-800 mb-4">Inclusions</h3>
+          <ul className="list-disc list-inside text-gray-700 text-sm md:text-lg mb-8 space-y-2">
             {tour.inclusions.map((inclusion: string, index: number) => (
               <li key={index}>{inclusion}</li>
             ))}
           </ul>
 
-          <h3 className="text-2xl font-bold text-gray-800 mb-4">Exclusions</h3>
-          <ul className="list-disc list-inside text-gray-700 text-lg mb-8 space-y-2">
+          <h3 className="text-lg md:text-2xl font-bold text-gray-800 mb-4">Exclusions</h3>
+          <ul className="list-disc list-inside text-gray-700 text-sm md:text-lg mb-8 space-y-2">
             {tour.exclusions.map((exclusion: string, index: number) => (
               <li key={index}>{exclusion}</li>
             ))}
@@ -144,7 +144,7 @@ export default function TourDetailPage({ params }: { params: { category: string;
 
           {tour.gallery && tour.gallery.length > 0 && (
             <>
-              <h3 className="text-2xl font-bold text-gray-800 mb-4">Gallery</h3>
+              <h3 className="text-lg md:text-2xl font-bold text-gray-800 mb-4">Gallery</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
                 {tour.gallery.map((imgSrc: string, index: number) => (
                   <div key={index} className="relative h-48 w-full rounded-lg overflow-hidden shadow-md">
@@ -161,15 +161,15 @@ export default function TourDetailPage({ params }: { params: { category: string;
           )}
         </div>
 
-        <div className="lg:col-span-1 bg-gray-50 p-8 rounded-lg shadow-lg h-fit sticky top-24">
-          <h3 className="text-3xl font-bold text-gray-800 mb-6">Tour Details</h3>
-          <p className="text-gray-700 text-xl mb-4">
+        <div className="lg:col-span-1 bg-gray-50 p-4 md:p-8 rounded-lg shadow-lg h-fit sticky top-24">
+          <h3 className="text-xl md:text-3xl font-bold text-gray-800 mb-6">Tour Details</h3>
+          <p className="text-gray-700 text-sm md:text-xl mb-4">
             <span className="font-semibold">Price:</span> {tour.price} /person
           </p>
-          <p className="text-gray-700 text-xl mb-6">
+          <p className="text-gray-700 text-sm md:text-xl mb-6">
             <span className="font-semibold">Duration:</span> {tour.duration}
           </p>
-          <Link href="/contact" className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-xl text-center transition duration-300">
+          <Link href="/contact" className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 md:py-4 md:px-8 rounded-full text-sm md:text-xl text-center transition duration-300">
             Inquire Now
           </Link>
         </div>

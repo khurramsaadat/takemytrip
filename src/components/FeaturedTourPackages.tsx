@@ -36,8 +36,8 @@ export default function FeaturedTourPackages() {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold text-gray-800 mb-4">Explore Our Top-Rated Tour Packages</h2>
-        <p className="text-xl text-gray-600 mb-12">Your Next Arabian Adventure Awaits</p>
+        <h2 className="text-xl md:text-4xl font-bold text-gray-800 mb-4">Explore Our Top-Rated Tour Packages</h2>
+        <p className="text-sm md:text-xl text-gray-600 mb-12">Your Next Arabian Adventure Awaits</p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {tourPackages.map((tour, index) => (
@@ -52,10 +52,10 @@ export default function FeaturedTourPackages() {
                 />
               </div>
               <div className="p-6 text-left">
-                <h3 className="text-xl font-semibold text-gray-800 mb-2">{tour.name}</h3>
-                <p className="text-gray-600 text-sm mb-2">Duration: {tour.duration}</p>
-                <p className="text-blue-600 font-bold text-lg">{tour.price} /person</p>
-                <button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full text-sm transition duration-300">
+                <h3 className="text-base md:text-xl font-semibold text-gray-800 mb-2">{tour.name}</h3>
+                <p className="text-gray-600 text-xs md:text-sm mb-2">Duration: {tour.duration}</p>
+                <p className="text-blue-600 font-bold text-sm md:text-lg">{tour.price} /person</p>
+                <button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-3 md:py-2 md:px-4 rounded-full text-xs md:text-sm transition duration-300">
                   View Details
                 </button>
               </div>

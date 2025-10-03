@@ -69,47 +69,64 @@ export default function Header() {
           </div>
         </button>
 
-        {/* Mobile Menu Overlay */}
-        <div
-          className={`md:hidden fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300 ${
-            isMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-          }`}
-          onClick={closeMenu}
-        />
+        {/* Mobile Menu Overlay - Removed background to show app UI */}
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden fixed top-0 right-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out ${
+          className={`md:hidden fixed top-0 right-0 h-full w-80 bg-gradient-to-b from-yellow-300 via-orange-300 to-yellow-400 shadow-2xl transform transition-transform duration-500 ease-in-out ${
             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
         >
-          <div className="p-6 pt-20">
-            <nav className="flex flex-col space-y-6">
+          {/* Close Button */}
+          <div className="absolute top-4 right-4">
+            <button
+              onClick={closeMenu}
+              className="w-12 h-12 flex items-center justify-center rounded-full bg-white bg-opacity-90 hover:bg-opacity-100 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+              aria-label="Close menu"
+            >
+              <svg
+                className="w-7 h-7 text-black"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                strokeWidth={3}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+
+          <div className="p-8 pt-24">
+            <nav className="flex flex-col space-y-8">
               <Link
                 href="/"
                 onClick={closeMenu}
-                className="text-gray-800 hover:text-blue-600 text-xl font-medium transition-all duration-300 transform hover:translate-x-2 hover:scale-105"
+                className="text-black hover:text-gray-800 text-2xl font-bold transition-all duration-500 transform hover:translate-x-4 hover:scale-110 border-b-2 border-transparent hover:border-black pb-2"
               >
                 Home
               </Link>
               <Link
                 href="/tours"
                 onClick={closeMenu}
-                className="text-gray-800 hover:text-blue-600 text-xl font-medium transition-all duration-300 transform hover:translate-x-2 hover:scale-105"
+                className="text-black hover:text-gray-800 text-2xl font-bold transition-all duration-500 transform hover:translate-x-4 hover:scale-110 border-b-2 border-transparent hover:border-black pb-2"
               >
                 Tours
               </Link>
               <Link
                 href="/about"
                 onClick={closeMenu}
-                className="text-gray-800 hover:text-blue-600 text-xl font-medium transition-all duration-300 transform hover:translate-x-2 hover:scale-105"
+                className="text-black hover:text-gray-800 text-2xl font-bold transition-all duration-500 transform hover:translate-x-4 hover:scale-110 border-b-2 border-transparent hover:border-black pb-2"
               >
                 About Us
               </Link>
               <Link
                 href="/contact"
                 onClick={closeMenu}
-                className="text-gray-800 hover:text-blue-600 text-xl font-medium transition-all duration-300 transform hover:translate-x-2 hover:scale-105"
+                className="text-black hover:text-gray-800 text-2xl font-bold transition-all duration-500 transform hover:translate-x-4 hover:scale-110 border-b-2 border-transparent hover:border-black pb-2"
               >
                 Contact
               </Link>

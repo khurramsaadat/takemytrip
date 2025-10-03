@@ -11,6 +11,8 @@ const albumImages = [
 export default function PhotoAlbum() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
 
   // Check if mobile on mount and resize
   useEffect(() => {
@@ -25,6 +27,31 @@ export default function PhotoAlbum() {
 
   const imagesPerSlide = isMobile ? 1 : 3;
   const totalSlides = Math.ceil(albumImages.length / imagesPerSlide);
+
+  // Swipe functionality
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(0);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % totalSlides);
+    }
+    if (isRightSwipe) {
+      setCurrentIndex((prevIndex) => (prevIndex - 1 + totalSlides) % totalSlides);
+    }
+  };
 
   // Auto-slide functionality
   useEffect(() => {
@@ -45,17 +72,22 @@ export default function PhotoAlbum() {
       <div className="container mx-auto px-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
             Desert Dreams: A Gallery of Dubai Safari
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base md:text-xl text-gray-600 max-w-3xl mx-auto">
             Set out on an unforgettable desert adventure with our expert-guided safari tours.
           </p>
           <div className="w-24 h-1 bg-orange-400 mx-auto mt-6"></div>
         </div>
 
         {/* Image Gallery */}
-        <div className="relative overflow-hidden rounded-lg">
+        <div 
+          className="relative overflow-hidden rounded-lg"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           <div 
             className="flex transition-transform duration-500 ease-in-out"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -68,9 +100,7 @@ export default function PhotoAlbum() {
                     .map((image, imageIndex) => (
                       <div 
                         key={`${slideIndex}-${imageIndex}`} 
-                        className={`relative rounded-lg overflow-hidden shadow-lg group ${
-                          isMobile ? 'h-160' : 'h-64 md:h-80'
-                        }`}
+                        className="relative h-[38rem] rounded-lg overflow-hidden shadow-lg group"
                       >
                         <Image
                           src={`/images/album-slide/${image}`}
@@ -107,18 +137,18 @@ export default function PhotoAlbum() {
 
         {/* Description Section */}
         <div className="mt-16 text-center">
-          <h3 className="text-3xl font-bold text-gray-800 mb-6">
+          <h3 className="text-xl md:text-3xl font-bold text-gray-800 mb-6">
             Dubai&apos;s Best Safari Experiences Curated Just for You
           </h3>
-          <p className="text-gray-700 text-sm leading-relaxed max-w-4xl mx-auto mb-8">
+          <p className="text-gray-700 text-xs md:text-sm leading-relaxed max-w-4xl mx-auto mb-8">
             If you are looking for more than desert adventures in Dubai, Take My Trip is the best choice. As the premier Desert Safari Dubai experience provider, we offer a wide range of fun activities with an amazing desert safari adventure. Take My Trip offers various activity packages that also include pickup from your location. With cultural heritage, beautiful sceneries, fun thrills, and wildlife safari, Take My Trip provides a range of unforgettable tours.
           </p>
           
-          <div className="bg-white p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
-            <h4 className="text-2xl font-bold text-gray-800 mb-4">
+          <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg max-w-4xl mx-auto">
+            <h4 className="text-lg md:text-2xl font-bold text-gray-800 mb-4">
               Best Desert Safari Dubai
             </h4>
-            <p className="text-gray-700 leading-relaxed">
+            <p className="text-gray-700 text-xs md:text-base leading-relaxed">
               Take My Trip offers expert drivers to provide the best desert safari experience including pick and drop facilities. We deliver you with an exciting and memorable experience that will remain with you even after you get back to your home. As Dubai morning and evening desert safari have been in hotspot for all adventure lovers, we are here to deliver extremely fun activities. Along with this, we offer a range of Dubai Desert Safari including Private Evening Safari, Quad Bike, and Overnight Safari.
             </p>
           </div>

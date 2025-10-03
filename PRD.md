@@ -46,8 +46,10 @@ Individuals and families interested in booking tour packages, primarily focusing
 
 *   **Visuals:** Emphasis on large, high-quality photos and videos (supplied by the client and stock photos from pexels.com or similar).
 *   **Aesthetics:** Clean, modern, and minimalist design with consistent typography and ample whitespace.
-*   **Navigation:** Intuitive and easy-to-use navigation bar.
-*   **Responsiveness:** Fully responsive design for optimal viewing on all devices (desktop, tablet, mobile).
+*   **Navigation:** Intuitive and easy-to-use navigation bar with responsive burger menu for mobile devices.
+*   **Responsiveness:** Fully responsive design for optimal viewing on all devices (desktop, tablet, mobile) with mobile-first typography system.
+*   **Mobile Experience:** Enhanced mobile experience with swipe gestures, burger menu animations, and optimized font sizes.
+*   **Interactive Elements:** Auto-sliding carousels, smooth transitions, and touch-friendly interfaces.
 
 ### 4.3. Technical Requirements
 
