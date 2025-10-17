@@ -93,8 +93,9 @@ const toursByCategory: { [key: string]: Tour[] } = {
   // Add more categories and their tours as needed
 };
 
-export default function TourCategoryDetailPage({ params }: { params: { category: string } }) {
-  const categorySlug = params.category;
+export default async function TourCategoryDetailPage({ params }: { params: Promise<{ category: string }> }) {
+  const resolvedParams = await params;
+  const categorySlug = resolvedParams.category;
   const tours = toursByCategory[categorySlug] || [];
 
   const categoryName = categorySlug

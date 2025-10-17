@@ -86,8 +86,9 @@ const tourDetails: { [key: string]: TourDetail } = {
   // Add more tour details as needed
 };
 
-export default function TourDetailPage({ params }: { params: { category: string; "tour-slug": string } }) {
-  const tourSlug = params["tour-slug"];
+export default async function TourDetailPage({ params }: { params: Promise<{ category: string; "tour-slug": string }> }) {
+  const resolvedParams = await params;
+  const tourSlug = resolvedParams["tour-slug"];
   const tour = tourDetails[tourSlug];
 
   if (!tour) {
