@@ -60,7 +60,7 @@ Individuals and families interested in booking tour packages, primarily focusing
 
 ## 5. Content Requirements
 
-*   **Logo:** Provided by the client (`logo.jpeg`).
+*   **Logo:** Provided by the client (`logo.png`).
 *   **Images/Videos:** High-quality images and videos provided by the client (in `public/images`) and supplemented with stock photos from pexels.com or similar.
 *   **Text:**
     *   About Us section text: "Who we are: Your Adventure Architects in the UAE. At Musktours, we specialize in curating unforgettable journeys through the heart of the Emirates. With deep local knowledge, handpicked tour experiences, and a passion for excellence, we are more than a travel company—we are your companions in discovery. Whether you're visiting for the first time or exploring deeper, our promise is simple: authentic, seamless, and exciting adventures from start to finish." (to be adapted/rephrased).

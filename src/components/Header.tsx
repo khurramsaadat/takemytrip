@@ -16,30 +16,30 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white shadow-md relative z-50">
+    <header className="absolute top-0 left-0 right-0 z-50">
       <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
         <Link href="/" className="flex items-center" onClick={closeMenu}>
           <Image
-            src="/images/logo.jpeg"
+            src="/images/logo.png"
             alt="Take My Trip Logo"
-            width={100}
-            height={50}
-            className="h-12 w-auto"
+            width={140}
+            height={70}
+            className="h-20 w-auto drop-shadow-lg"
           />
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-4">
-          <Link href="/" className="text-gray-800 hover:text-blue-600 transition-colors duration-300">
+          <Link href="/" className="text-white hover:text-yellow-400 transition-colors duration-300 drop-shadow-lg font-medium">
             Home
           </Link>
-          <Link href="/tours" className="text-gray-800 hover:text-blue-600 transition-colors duration-300">
+          <Link href="/tours" className="text-white hover:text-yellow-400 transition-colors duration-300 drop-shadow-lg font-medium">
             Tours
           </Link>
-          <Link href="/about" className="text-gray-800 hover:text-blue-600 transition-colors duration-300">
+          <Link href="/about" className="text-white hover:text-yellow-400 transition-colors duration-300 drop-shadow-lg font-medium">
             About Us
           </Link>
-          <Link href="/contact" className="text-gray-800 hover:text-blue-600 transition-colors duration-300">
+          <Link href="/contact" className="text-white hover:text-yellow-400 transition-colors duration-300 drop-shadow-lg font-medium">
             Contact
           </Link>
         </div>
@@ -52,17 +52,17 @@ export default function Header() {
         >
           <div className="relative w-6 h-5 flex flex-col justify-between">
             <span
-              className={`block h-0.5 w-full bg-gray-800 transform transition-all duration-300 ease-in-out ${
+              className={`block h-0.5 w-full bg-white drop-shadow-lg transform transition-all duration-300 ease-in-out ${
                 isMenuOpen ? 'rotate-45 translate-y-2' : ''
               }`}
             />
             <span
-              className={`block h-0.5 w-full bg-gray-800 transition-all duration-300 ease-in-out ${
+              className={`block h-0.5 w-full bg-white drop-shadow-lg transition-all duration-300 ease-in-out ${
                 isMenuOpen ? 'opacity-0' : 'opacity-100'
               }`}
             />
             <span
-              className={`block h-0.5 w-full bg-gray-800 transform transition-all duration-300 ease-in-out ${
+              className={`block h-0.5 w-full bg-white drop-shadow-lg transform transition-all duration-300 ease-in-out ${
                 isMenuOpen ? '-rotate-45 -translate-y-2' : ''
               }`}
             />

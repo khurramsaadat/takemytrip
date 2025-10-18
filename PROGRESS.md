@@ -36,7 +36,7 @@
 
 5. ✅ **Image Renaming and Organization (2025-10-03)**
    - Renamed all WhatsApp images to numbered format (01.jpg - 36.jpg)
-   - Kept logo.jpeg as original filename
+   - Updated logo from logo.jpeg to logo.png (new circular logo design)
    - Updated all code references to use new image names
    - Added hero images (hero.jpg, hero2.jpg, hero3.jpg, hero4.jpg, hero5.jpg)
 
