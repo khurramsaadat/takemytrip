@@ -22,17 +22,17 @@ const toursByCategory: { [key: string]: Tour[] } = {
     },
     {
       name: "Private Sunset Desert Safari & BBQ Dinner",
-      price: "AED 899.00",
+      price: "AED 1000/Vehicle (Max 6 pax)",
       duration: "5-6 hours",
       image: "/images/15.jpg",
-      link: "/tours/desert-safari/standard-sunset-desert-safari",
+      link: "/tours/desert-safari/private-sunset-ds-bbq",
     },
     {
       name: "Morning Desert Safari",
-      price: "AED 899.00",
-      duration: "6-7 hours",
+      price: "AED 100",
+      duration: "4 hours",
       image: "/images/16.jpg",
-      link: "/tours/desert-safari/self-drive-evening-desert-safari",
+      link: "/tours/desert-safari/morning-desert-safari",
     },
   ],
   "city-tours": [
@@ -122,7 +122,7 @@ export default async function TourCategoryDetailPage({ params }: { params: Promi
               <div className="p-4 md:p-6 text-left">
                 <h2 className="text-base md:text-xl font-semibold text-gray-800 mb-2">{tour.name}</h2>
                 <p className="text-gray-600 text-xs md:text-sm mb-2">Duration: {tour.duration}</p>
-                <p className="text-blue-600 font-bold text-sm md:text-lg">{tour.price} /person</p>
+                <p className="text-blue-600 font-bold text-sm md:text-lg">{tour.price}{!tour.price.includes('Vehicle') ? ' /person' : ''}</p>
                 <button className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-1 px-3 md:py-2 md:px-4 rounded-full text-xs md:text-sm transition duration-300">
                   View Details
                 </button>

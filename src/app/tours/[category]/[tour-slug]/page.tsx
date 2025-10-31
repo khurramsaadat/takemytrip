@@ -53,13 +53,13 @@ const tourDetails: { [key: string]: TourDetail } = {
       "/images/25.jpg",
     ],
   },
-  "standard-sunset-desert-safari": {
+  "private-sunset-ds-bbq": {
     name: "Private Sunset Desert Safari & BBQ Dinner",
     category: "Desert Safari",
-    price: "AED 899.00",
+    price: "AED 1000/Vehicle (Max 6 pax)",
     duration: "5-6 hours",
     image: "/images/15.jpg",
-    description: "Join the Ride – Shared 4x4 Desert Safari Adventure. Experience an unforgettable evening in the Dubai desert with thrilling dune bashing, a camel ride, sandboarding, and a delicious BBQ dinner under the stars. Enjoy traditional entertainment like belly dancing and fire shows at a Bedouin-style camp.",
+    description: "Join the Ride – Shared 4x4 Desert Safari Adventure. Your Private Gateway to the Golden Dunes (max 6 pax). Experience an unforgettable evening in the Dubai desert with thrilling dune bashing, a camel ride, sandboarding, and a delicious BBQ dinner under the stars. Enjoy traditional entertainment like belly dancing and fire shows at a Bedouin-style camp.",
     highlights: [
       "Dune bashing in a 4x4 vehicle",
       "Camel riding experience",
@@ -89,34 +89,26 @@ const tourDetails: { [key: string]: TourDetail } = {
       "/images/25.jpg",
     ],
   },
-  "self-drive-evening-desert-safari": {
+  "morning-desert-safari": {
     name: "Morning Desert Safari",
     category: "Desert Safari",
-    price: "AED 899.00",
-    duration: "6-7 hours",
+    price: "AED 100",
+    duration: "4 hours",
     image: "/images/16.jpg",
-    description: "Join the Ride – Shared 4x4 Desert Safari Adventure. Experience an unforgettable morning in the Dubai desert with thrilling dune bashing, a camel ride, sandboarding, and a delicious BBQ dinner under the stars. Enjoy traditional entertainment like belly dancing and fire shows at a Bedouin-style camp.",
+    description: "Where the Sun Rises and the Desert Breathes - A Dawn Safari Like No Other. The perfect way to start your day - fresh, exhilarating, and unforgettable. Feel the dawn air as you journey across golden dunes in a powerful 4×4, far from the noise of the city. Feel the tranquility of the desert as you enjoy a peaceful camel ride through the soft morning light. For those seeking a touch of thrill, sandboarding down pristine slopes offers the perfect blend of calm and adventure.",
     highlights: [
       "Dune bashing in a 4x4 vehicle",
       "Camel riding experience",
       "Sandboarding down desert dunes",
-      "BBQ dinner with vegetarian and non-vegetarian options",
-      "Live entertainment (Belly Dance, Tanoura Show, Fire Show)",
-      "Henna painting and Shisha smoking",
     ],
     inclusions: [
       "Pickup and drop-off from your hotel/residence",
       "Dune bashing",
       "Camel ride",
       "Sandboarding",
-      "BBQ dinner",
-      "Soft drinks and water",
-      "Live entertainment",
     ],
     exclusions: [
-      "Alcoholic beverages",
-      "Quad biking (available at extra cost)",
-      "Souvenirs",
+      "Quad biking (available at extra cost – A MUST TRY THOUGH)",
     ],
     gallery: [
       "/images/22.jpg",
@@ -237,7 +229,7 @@ export default async function TourDetailPage({ params }: { params: Promise<{ cat
         <div className="lg:col-span-1 bg-gray-50 p-4 md:p-8 rounded-lg shadow-lg h-fit sticky top-24">
           <h3 className="text-xl md:text-3xl font-bold text-gray-800 mb-6">Tour Details</h3>
           <p className="text-gray-700 text-sm md:text-xl mb-4">
-            <span className="font-semibold">Price:</span> {tour.price} /person
+            <span className="font-semibold">Price:</span> {tour.price}{!tour.price.includes('Vehicle') ? ' /person' : ''}
           </p>
           <p className="text-gray-700 text-sm md:text-xl mb-6">
             <span className="font-semibold">Duration:</span> {tour.duration}
