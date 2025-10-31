@@ -94,19 +94,19 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-20 p-4 transition-colors duration-1000">
-        <h1 className={`text-2xl md:text-5xl font-bold mb-4 transition-colors duration-1000 ${
+        <h1 className={`text-2xl md:text-4xl font-bold mb-4 transition-colors duration-1000 ${
           currentImage.isDark 
             ? 'drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] text-shadow-lg' 
             : 'drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]'
         }`}>
-          Discover Dubai Like Never Before
+          Uncover the Magic of Dubai – Thrill in the Dunes, Cruise in Luxury
         </h1>
         <p className={`text-sm md:text-xl mb-8 transition-colors duration-1000 ${
           currentImage.isDark 
             ? 'drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]' 
             : 'drop-shadow-[0_1px_3px_rgba(255,255,255,0.8)]'
         }`}>
-          From thrilling desert safaris to luxurious dhow cruises
+          Curated by Take My Trip – Unforgettable Adventures in the Heart of Arabia
         </p>
         <Link href="/tours" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 md:py-3 md:px-8 rounded-full text-sm md:text-lg transition duration-300 shadow-lg">
           Explore Our Tours
