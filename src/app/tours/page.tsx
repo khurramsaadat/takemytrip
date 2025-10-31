@@ -5,7 +5,7 @@ const categories = [
   {
     name: "Desert Safari",
     description: "Experience the thrill of dune bashing and a traditional Bedouin camp.",
-    image: "/images/01.jpg",
+    image: "/images/09.jpg",
     link: "/tours/desert-safari",
   },
   {

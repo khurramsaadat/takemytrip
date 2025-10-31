@@ -4,8 +4,8 @@ import Link from "next/link";
 const categories = [
   {
     name: "Desert Safari",
-    description: "This is the most popular tour/activity to do in UAE",
-    image: "/images/01.jpg",
+    description: "Voted UAE's Top Tour Experience – Desert Safari Adventure Awaits!",
+    image: "/images/09.jpg",
     link: "/tours/desert-safari",
   },
   {

@@ -16,7 +16,7 @@ const toursByCategory: { [key: string]: Tour[] } = {
     {
       name: "Premium Evening Desert Safari & BBQ Dinner",
       price: "AED 150.00",
-      duration: "6-7 hours",
+      duration: "5-6 hours",
       image: "/images/09.jpg",
       link: "/tours/desert-safari/premium-evening-desert-safari",
     },

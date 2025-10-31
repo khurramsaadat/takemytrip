@@ -21,9 +21,9 @@ const tourDetails: { [key: string]: TourDetail } = {
     name: "Premium Evening Desert Safari & BBQ Dinner",
     category: "Desert Safari",
     price: "AED 150.00",
-    duration: "6-7 hours",
+    duration: "5-6 hours",
     image: "/images/09.jpg",
-    description: "Experience an unforgettable evening in the Dubai desert with thrilling dune bashing, a camel ride, sandboarding, and a delicious BBQ dinner under the stars. Enjoy traditional entertainment like belly dancing and fire shows at a Bedouin-style camp.",
+    description: "Join the Ride – Shared 4x4 Desert Safari Adventure. Experience an unforgettable evening in the Dubai desert with thrilling dune bashing, a camel ride, sandboarding, and a delicious BBQ dinner under the stars. Enjoy traditional entertainment like belly dancing and fire shows at a Bedouin-style camp.",
     highlights: [
       "Dune bashing in a 4x4 vehicle",
       "Camel riding experience",
