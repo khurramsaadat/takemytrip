@@ -21,14 +21,14 @@ const toursByCategory: { [key: string]: Tour[] } = {
       link: "/tours/desert-safari/premium-evening-desert-safari",
     },
     {
-      name: "Standard Sunset Desert Safari",
+      name: "Private Sunset Desert Safari & BBQ Dinner",
       price: "AED 899.00",
       duration: "5-6 hours",
       image: "/images/15.jpg",
       link: "/tours/desert-safari/standard-sunset-desert-safari",
     },
     {
-      name: "Self-Drive Evening Desert Safari",
+      name: "Morning Desert Safari",
       price: "AED 899.00",
       duration: "6-7 hours",
       image: "/images/16.jpg",
