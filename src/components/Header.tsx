@@ -30,16 +30,16 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-4">
-          <Link href="/" className="text-white hover:text-yellow-400 transition-colors duration-300 drop-shadow-lg font-medium">
+          <Link href="/" className="text-gray-800 hover:text-blue-600 transition-colors duration-300 drop-shadow-sm font-medium">
             Home
           </Link>
-          <Link href="/tours" className="text-white hover:text-yellow-400 transition-colors duration-300 drop-shadow-lg font-medium">
+          <Link href="/tours" className="text-gray-800 hover:text-blue-600 transition-colors duration-300 drop-shadow-sm font-medium">
             Tours
           </Link>
-          <Link href="/about" className="text-white hover:text-yellow-400 transition-colors duration-300 drop-shadow-lg font-medium">
+          <Link href="/about" className="text-gray-800 hover:text-blue-600 transition-colors duration-300 drop-shadow-sm font-medium">
             About Us
           </Link>
-          <Link href="/contact" className="text-white hover:text-yellow-400 transition-colors duration-300 drop-shadow-lg font-medium">
+          <Link href="/contact" className="text-gray-800 hover:text-blue-600 transition-colors duration-300 drop-shadow-sm font-medium">
             Contact
           </Link>
         </div>
@@ -52,17 +52,17 @@ export default function Header() {
         >
           <div className="relative w-6 h-5 flex flex-col justify-between">
             <span
-              className={`block h-0.5 w-full bg-white drop-shadow-lg transform transition-all duration-300 ease-in-out ${
+              className={`block h-0.5 w-full bg-gray-800 drop-shadow-sm transform transition-all duration-300 ease-in-out ${
                 isMenuOpen ? 'rotate-45 translate-y-2' : ''
               }`}
             />
             <span
-              className={`block h-0.5 w-full bg-white drop-shadow-lg transition-all duration-300 ease-in-out ${
+              className={`block h-0.5 w-full bg-gray-800 drop-shadow-sm transition-all duration-300 ease-in-out ${
                 isMenuOpen ? 'opacity-0' : 'opacity-100'
               }`}
             />
             <span
-              className={`block h-0.5 w-full bg-white drop-shadow-lg transform transition-all duration-300 ease-in-out ${
+              className={`block h-0.5 w-full bg-gray-800 drop-shadow-sm transform transition-all duration-300 ease-in-out ${
                 isMenuOpen ? '-rotate-45 -translate-y-2' : ''
               }`}
             />

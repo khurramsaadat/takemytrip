@@ -196,7 +196,20 @@ export default async function TourDetailPage({ params }: { params: Promise<{ cat
   }
 
   return (
-    <div className="container mx-auto px-6 py-16">
+    <div className="container mx-auto px-6 py-16 pt-32">
+      {/* Back Navigation */}
+      <div className="mb-8">
+        <Link 
+          href={`/tours/${resolvedParams.category}`}
+          className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm md:text-lg transition duration-300"
+        >
+          <svg className="w-4 h-4 md:w-5 md:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to {tour.category} Tours
+        </Link>
+      </div>
+      
       <h1 className="text-xl md:text-5xl font-bold text-center text-gray-800 mb-12">{tour.name}</h1>
 
       <div className="relative h-[70vh] w-full mb-12 rounded-lg overflow-hidden shadow-lg">
