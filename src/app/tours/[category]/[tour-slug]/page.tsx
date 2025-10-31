@@ -117,6 +117,34 @@ const tourDetails: { [key: string]: TourDetail } = {
       "/images/25.jpg",
     ],
   },
+  "evening-desert-safari": {
+    name: "Evening Desert Safari",
+    category: "Desert Safari",
+    price: "AED 100",
+    duration: "4 hours",
+    image: "/images/17.jpg",
+    description: "Glide into the golden hour of the Arabian desert—where every dune holds a story, and every sunset feels like magic. Feel the thrill as you carve through red-sand dunes in an adrenaline-pumping 4x4 ride. To add up to the sand, speed, and sunsets—desert sandboarding doesn't get better than this. Then, unwind with a peaceful camel trek at sunset, the horizon ablaze with desert hues.",
+    highlights: [
+      "Dune bashing in a 4x4 vehicle",
+      "Camel riding experience",
+      "Sandboarding down desert dunes",
+    ],
+    inclusions: [
+      "Pickup and drop-off from your hotel/residence",
+      "Dune bashing",
+      "Camel ride",
+      "Sandboarding",
+    ],
+    exclusions: [
+      "Quad biking (available at extra cost – A MUST TRY THOUGH)",
+    ],
+    gallery: [
+      "/images/22.jpg",
+      "/images/23.jpg",
+      "/images/24.jpg",
+      "/images/25.jpg",
+    ],
+  },
   "abu-dhabi-grand-mosque-tour": {
     name: "Abu Dhabi Sheikh Zayed Grand Mosque Tour from Dubai",
     category: "City Tours",

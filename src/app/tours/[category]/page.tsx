@@ -34,6 +34,13 @@ const toursByCategory: { [key: string]: Tour[] } = {
       image: "/images/16.jpg",
       link: "/tours/desert-safari/morning-desert-safari",
     },
+    {
+      name: "Evening Desert Safari",
+      price: "AED 100",
+      duration: "4 hours",
+      image: "/images/17.jpg",
+      link: "/tours/desert-safari/evening-desert-safari",
+    },
   ],
   "city-tours": [
     {

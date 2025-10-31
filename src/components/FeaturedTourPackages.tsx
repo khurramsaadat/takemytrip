@@ -23,13 +23,6 @@ const tourPackages = [
     image: "/images/12.jpg",
     link: "/tours/combo-tours/grand-mosque-desert-safari-combo",
   },
-  {
-    name: "Dubai City Tour | Burj Khalifa, Creek Abra & Souks",
-    price: "AED 399.00",
-    duration: "4-5 hours",
-    image: "/images/10.jpg",
-    link: "/tours/city-tours/dubai-city-tour",
-  },
 ];
 
 export default function FeaturedTourPackages() {
@@ -39,7 +32,7 @@ export default function FeaturedTourPackages() {
         <h2 className="text-xl md:text-4xl font-bold text-gray-800 mb-4">Explore Our Top-Rated Tour Packages</h2>
         <p className="text-sm md:text-xl text-gray-600 mb-12">Your Next Arabian Adventure Awaits</p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
           {tourPackages.map((tour, index) => (
             <Link href={tour.link} key={index} className="block bg-gray-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="relative h-56 w-full">
